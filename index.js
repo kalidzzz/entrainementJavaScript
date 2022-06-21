@@ -67,6 +67,7 @@ document.addEventListener("keypress", (e) => {
     keypressContainer.style.color = "blue";
   }
 });
+// nav bar scroll
 
 const nav = document.querySelector("nav");
 
@@ -77,7 +78,7 @@ window.addEventListener("scroll", () => {
     nav.style.top = "-50px";
   }
 });
-
+// donnée dans l'input
 const inputName = document.getElementById("name");
 const select = document.querySelector("select");
 const form = document.querySelector("form");
@@ -104,4 +105,18 @@ form.addEventListener("submit", (e) => {
   } else {
     alert(`veuillez accepter les cvg`);
   }
+});
+
+// load event
+
+window.addEventListener("load", () => {});
+
+//
+
+const boxes = document.querySelectorAll(".box");
+
+boxes.forEach((box) => {
+  box.addEventListener("click", (e) => {
+    e.target.style.transform = "scale(0.7)";
+  });
 });
