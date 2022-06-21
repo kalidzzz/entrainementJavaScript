@@ -50,13 +50,58 @@ answer.addEventListener("mouseover", () => {
 const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
 
+const ring = () => {
+  const audio = new Audio();
+  audio.src = "./z.mp3";
+  audio.play();
+};
+
 document.addEventListener("keypress", (e) => {
   key.textContent = e.key;
   if (e.key === "j") {
+    ring();
     keypressContainer.style.color = "pink";
   } else if (e.key === "h") {
     keypressContainer.style.color = "red";
   } else {
     keypressContainer.style.color = "blue";
+  }
+});
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 120) {
+    nav.style.top = 0;
+  } else {
+    nav.style.top = "-50px";
+  }
+});
+
+const inputName = document.getElementById("name");
+const select = document.querySelector("select");
+const form = document.querySelector("form");
+const result = document.querySelector("form > div");
+
+let pseudo = "";
+let language = "";
+
+inputName.addEventListener("input", (e) => {
+  pseudo = e.target.value;
+});
+
+select.addEventListener("input", (e) => {
+  language = e.target.value;
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (cvg.checked) {
+    result.innerHTML = `
+    <h3> pseudo: ${pseudo} <h3/>
+    <h4> language: ${language} <h4/>
+    `;
+  } else {
+    alert(`veuillez accepter les cvg`);
   }
 });

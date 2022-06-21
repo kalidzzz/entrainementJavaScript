@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
 
-    <div class="click-event box">
-      <h4>quelle est la capital de la suisse ?</h4>
-      <button id="btn-1">Berne</button>
-      <button id="btn-2">Zurich</button>
-      <p>La bonne est réponse est Berne</p>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Document</title>
+</head>
 
-    <div class="keypress box">
-      <h2>vous appuyez sur la touche: <span id="key"></span></h2>
-    </div>
+<body>
+  <div class="click-event box">
+    <h4>quelle est la capital de la suisse ?</h4>
+    <button id="btn-1">Berne</button>
+    <button id="btn-2">Zurich</button>
+    <p>La bonne est réponse est Berne</p>
+  </div>
 
-    <div class="mousemouve"></div>
-    <script src="./index.js"></script>
-  </body>
+  <div class="keypress box">
+    <h2>vous appuyez sur la touche: <span id="key"></span></h2>
+  </div>
+
+  <div class="mousemouve"></div>
+  <nav>
+    <ul>
+      <li>Home</a></li>
+      <li>About</a></li>
+      <li>Contact</a></li>
+    </ul>
+  </nav>
+  <form action="" class="box">
+    <input  id ="name" type="text" placeholder="Votre nom" />
+
+    <select>
+      <option value=""> Sélectionner votre langage favoris
+      </option>
+      <option value="js">js</option>
+      <option value="php">php</option>
+      <option value="ruby">ruby</option>
+    </select>
+    <input type="checkbox" id="cvg"/>
+    <label for="cvg">J'accepte les CGU</label>
+    <input id="valider" type="submit" value="valider"/>
+    <div></div>
+  </form>
+
+  <script src="./index.js"></script>
+</body>
+
 </html>
