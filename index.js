@@ -46,3 +46,17 @@ question.addEventListener("mouseout", () => {
 answer.addEventListener("mouseover", () => {
   answer.style.transform = "rotate(2deg)";
 });
+
+const keypressContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+
+document.addEventListener("keypress", (e) => {
+  key.textContent = e.key;
+  if (e.key === "j") {
+    keypressContainer.style.color = "pink";
+  } else if (e.key === "h") {
+    keypressContainer.style.color = "red";
+  } else {
+    keypressContainer.style.color = "blue";
+  }
+});
